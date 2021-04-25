@@ -1,0 +1,128 @@
+/* @import 'reset.css';
+@import 'game.css';
+@import 'sky.css';
+@import 'land.css';
+@import 'bird.css';
+@import 'pipe.css';
+@import 'info.css';
+@import 'gameOver.css'; */
+
+/* reset.css */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* game.css */
+.game {
+    position: relative;
+
+    width: 800px;
+    height: 600px;
+    border: 2px solid #008c8c;
+    margin: 100px auto 0;
+
+    overflow: hidden;
+}
+
+/* sky.css */
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 200%;
+    height: 100%;
+    background-image: url('../images/sky.png');
+    background-repeat: repeat-x;
+}
+
+/* land.css */
+.land {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 200%;
+    height: 112px;
+    background-image: url('../images/land.png');
+    background-repeat: repeat-x;
+}
+
+/* bird.css */
+.bird {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+
+    width: 33px;
+    height: 26px;
+
+    background-image: url('../images/bird.png');
+}
+
+/* 翅膀朝上 */
+.bird.swing-status0 {
+    background-position: -8px -10px;
+}
+
+/* 翅膀水平 */
+.bird.swing-status1 {
+    background-position: -60px -10px;
+}
+
+/* 翅膀朝下 */
+.bird.swing-status2 {
+    background-position: -113px -10px;
+}
+
+/* pipe.css */
+.pipe {
+    position: absolute;
+
+    /* 水管的宽度固定 高度随机 */
+    width: 52px;
+    height: 200px;
+    /* border: 1px solid; */
+
+}
+
+/* 上水管 */
+.pipe.up {
+    background-image: url('../images/pipeUp.png');
+    background-position: bottom;
+}
+
+/* 下水管 */
+.pipe.down {
+    background-image: url('../images/pipeDown.png');
+    bottom: 112px;
+}
+
+/* gameOver.css */
+.game-over {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    background-color: rgba(0, 0, 0, .3);
+
+    line-height: 600px;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* info.css */
+.info {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5rem;
+    color: #999;
+}
